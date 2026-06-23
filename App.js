@@ -18,6 +18,8 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 
 // Import Screens
 import HomeScreen from './screens/HomeScreen';
+import RestaurantListScreen from './screens/RestaurantListScreen';
+import RestaurantMenuScreen from './screens/RestaurantMenuScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
 import CheckoutScreen from './screens/CheckoutScreen';
@@ -72,9 +74,14 @@ function HomeStackNavigator() {
       }}
     >
       <Stack.Screen 
-        name="HomeMain" 
-        component={HomeScreen} 
+        name="RestaurantList" 
+        component={RestaurantListScreen} 
         options={{ headerShown: false }}
+      />
+      <Stack.Screen 
+        name="RestaurantMenu" 
+        component={RestaurantMenuScreen} 
+        options={{ title: '' }}
       />
       <Stack.Screen 
         name="Product" 

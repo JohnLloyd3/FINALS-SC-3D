@@ -1,0 +1,149 @@
+╔══════════════════════════════════════════════════════════════╗
+║           HOW TO KNOW IF ORDER IS RECEIVED                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────┐
+│  Step 1: Place Your Order                                   │
+│  ────────────────────────────────────────────────────────    │
+│  • Fill checkout form                                        │
+│  • Tap "Place Order" button                                  │
+│  • See confirmation screen                                   │
+│  • Initial Status: ⏳ PENDING (Orange)                       │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│  Step 2: Open Order History                                 │
+│  ────────────────────────────────────────────────────────    │
+│  • Tap 📦 Orders tab at bottom                               │
+│  • Your order appears at the top                             │
+│  • Shows: Order number, date, status badge                   │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│  Step 3: Check Order Status                                 │
+│  ────────────────────────────────────────────────────────    │
+│  • Tap on your order to expand it                            │
+│  • See STATUS TIMELINE at the top:                           │
+│                                                               │
+│    ⏳ → ✅ → 👨‍🍳 → 🍽️ → 🚗 → ✓                              │
+│    │    │     │      │     │     │                           │
+│    │    │     │      │     │     └─ Completed               │
+│    │    │     │      │     └─────── Delivering              │
+│    │    │     │      └───────────── Ready                   │
+│    │    │     └──────────────────── Preparing               │
+│    │    └────────────────────────── ✅ CONFIRMED            │
+│    └─────────────────────────────── Pending                 │
+│                                                               │
+│  • Active steps are BRIGHT                                   │
+│  • Future steps are FADED                                    │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│  Step 4: Wait for Confirmation (1-5 minutes)                │
+│  ────────────────────────────────────────────────────────    │
+│  BEFORE:  ⏳ PENDING (Orange badge)                          │
+│           "Restaurant is reviewing your order..."            │
+│                                                               │
+│  AFTER:   ✅ CONFIRMED (Blue badge)                          │
+│           "Restaurant has received your order!"              │
+│                                                               │
+│  ✅ THIS MEANS ORDER IS RECEIVED! ✅                         │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│  Step 5: Refresh to See Updates                             │
+│  ────────────────────────────────────────────────────────    │
+│  • Swipe DOWN on order list to refresh                       │
+│  • Or close app and reopen                                   │
+│  • Status updates automatically                              │
+│  • Check every 5-10 minutes for changes                      │
+└──────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════╗
+║                    STATUS MEANINGS                           ║
+╚══════════════════════════════════════════════════════════════╝
+
+┌────────────┬──────────┬─────────────────────────────────────┐
+│ Status     │ Badge    │ What It Means                       │
+├────────────┼──────────┼─────────────────────────────────────┤
+│ ⏳ Pending │ 🟠 Orange│ Just placed, waiting for restaurant │
+│            │          │ (NOT confirmed yet)                 │
+├────────────┼──────────┼─────────────────────────────────────┤
+│ ✅ Confirm │ 🔵 Blue  │ ✅ RESTAURANT HAS YOUR ORDER!       │
+│            │          │ They're starting to prepare         │
+├────────────┼──────────┼─────────────────────────────────────┤
+│ 👨‍🍳 Prep   │ 🟣 Purple│ Food is being cooked right now     │
+│            │          │ (15-30 minutes)                     │
+├────────────┼──────────┼─────────────────────────────────────┤
+│ 🍽️ Ready   │ 🟠 Orange│ Food is done, waiting for pickup/  │
+│            │          │ delivery driver                     │
+├────────────┼──────────┼─────────────────────────────────────┤
+│ 🚗 Deliver │ 🔵 L.Blue│ Driver is on the way to you        │
+│            │          │ (10-30 minutes)                     │
+├────────────┼──────────┼─────────────────────────────────────┤
+│ ✓ Complete │ 🟢 Green │ Delivered! Enjoy your meal!         │
+├────────────┼──────────┼─────────────────────────────────────┤
+│ ✕ Cancel   │ 🔴 Red   │ Order was cancelled                 │
+└────────────┴──────────┴─────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════╗
+║                    QUICK ANSWER                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+  Q: How do I know if restaurant received my order?
+  
+  A: When status changes from:
+  
+     ⏳ PENDING  →  ✅ CONFIRMED
+     
+     This means: ✅ RESTAURANT HAS IT!
+
+╔══════════════════════════════════════════════════════════════╗
+║                  TROUBLESHOOTING                             ║
+╚══════════════════════════════════════════════════════════════╝
+
+  ❓ Status stuck on "Pending" for 10+ minutes?
+  ────────────────────────────────────────────
+  → Pull down to refresh
+  → Check internet connection
+  → Call restaurant directly
+  → May be busy or closed
+
+  ❓ Status not updating?
+  ────────────────────────────────────────────
+  → Swipe down to refresh Order History
+  → Close app completely and reopen
+  → Wait 2-3 minutes and check again
+  → Restaurant may update manually
+
+  ❓ Want to track order faster?
+  ────────────────────────────────────────────
+  → Refresh every 5 minutes
+  → Status updates when restaurant takes action
+  → Currently manual updates (not automatic)
+
+╔══════════════════════════════════════════════════════════════╗
+║                    TIMELINE                                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+  You place order
+       ↓ (1-5 minutes)
+  ⏳ PENDING
+       ↓ Restaurant reviews order
+  ✅ CONFIRMED ← ORDER RECEIVED! ✅
+       ↓ (1-3 minutes)
+  👨‍🍳 PREPARING
+       ↓ (15-30 minutes)
+  🍽️ READY
+       ↓ (2-10 minutes)
+  🚗 DELIVERING
+       ↓ (10-30 minutes)
+  ✓ COMPLETED
+       ↓
+  🎉 Enjoy your meal!
+
+═══════════════════════════════════════════════════════════════
+
+For detailed guide, see: ORDER_STATUS_GUIDE.md
+
+═══════════════════════════════════════════════════════════════

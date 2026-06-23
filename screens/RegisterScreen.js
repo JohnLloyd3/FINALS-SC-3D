@@ -16,7 +16,7 @@ import { useAuth } from '../context/AuthContext';
 import { COLORS } from '../styles/colors';
 
 export default function RegisterScreen({ navigation }) {
-  const { register } = useAuth();
+  const { register, logout } = useAuth();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -82,9 +82,20 @@ export default function RegisterScreen({ navigation }) {
         setFormError(errorMsg);
         Alert.alert('Registration Error', errorMsg);
       } else {
-        console.log('[REGISTER SCREEN] Registration successful!');
-        // No need to navigate - user is auto-logged in and AuthContext will handle navigation
-        Alert.alert('Success', 'Welcome! Your account has been created successfully.');
+        console.log('[REGISTER SCREEN] Registration successful! Logging out user...');
+        // Sign out user so they can login manually
+        await logout();
+        
+        Alert.alert(
+          'Success',
+          'Account created successfully! Please login to continue.',
+          [
+            {
+              text: 'OK',
+              onPress: () => navigation.navigate('Login')
+            }
+          ]
+        );
       }
     } catch (err) {
       console.error('[REGISTER SCREEN] Unexpected error:', err);

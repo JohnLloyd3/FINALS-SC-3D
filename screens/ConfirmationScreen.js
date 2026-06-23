@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import QRCode from 'react-native-qrcode-svg';
 import { COLORS } from '../styles/colors';
 
 const ConfirmationScreen = ({ route, navigation }) => {
@@ -33,11 +32,6 @@ const ConfirmationScreen = ({ route, navigation }) => {
   const handleContinueShopping = () => {
     // Navigate to the bottom of the Home stack (HomeMain screen)
     navigation.navigate('HomeMain');
-  };
-
-  // Navigate to order history
-  const handleViewOrderHistory = () => {
-    navigation.getParent()?.navigate('OrderHistory');
   };
 
   return (
@@ -89,26 +83,11 @@ const ConfirmationScreen = ({ route, navigation }) => {
           </View>
         </View>
 
-        {/* QR Code Section */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>📲 Order QR Code</Text>
-          <View style={styles.qrCodeContainer}>
-            <QRCode
-              value={`ORDER-${orderData.id}`}
-              size={200}
-              color={COLORS.text}
-              backgroundColor={COLORS.background}
-              quietZone={10}
-            />
-            <Text style={styles.qrCodeLabel}>Scan this QR code to track your order</Text>
-          </View>
-        </View>
-
         {/* Order Items */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>🍽️ Order Items</Text>
           
-          {orderData.items.map((item, index) => (
+          {orderData.items.map((item) => (
             <View key={item.id} style={styles.orderItem}>
               <View style={styles.itemInfo}>
                 <Text style={styles.itemName}>{item.name}</Text>
@@ -356,20 +335,6 @@ const styles = StyleSheet.create({
     color: COLORS.background,
     fontSize: 18,
     fontWeight: 'bold',
-  },
-  qrCodeContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 20,
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    padding: 15,
-  },
-  qrCodeLabel: {
-    marginTop: 15,
-    fontSize: 14,
-    color: COLORS.muted,
-    textAlign: 'center',
   },
 });
 
