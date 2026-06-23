@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Food Ordering App",
-    "slug": "food-ordering-app",
+    "name": "GrabBite",
+    "slug": "grabbite",
     "version": "1.0.0",
     "sdkVersion": "54.0.0",
     "orientation": "portrait",

@@ -58,10 +58,13 @@ export default function LoginScreen({ navigation }) {
           {/* Header */}
           <View style={styles.header}>
             <View style={styles.logoContainer}>
-              <Text style={styles.logoText}>🍔</Text>
+              <View style={styles.logoPlaceholder}>
+                <Text style={styles.logoEmoji}>🍔</Text>
+                <Text style={styles.logoBag}>🛍️</Text>
+              </View>
             </View>
-            <Text style={styles.appName}>Welcome to Food Ordering</Text>
-            <Text style={styles.subtitle}>Discover amazing meals and enjoy</Text>
+            <Text style={styles.appName}>GrabBite</Text>
+            <Text style={styles.subtitle}>Order food from your favorite restaurants</Text>
           </View>
 
           {/* Form */}
@@ -195,22 +198,42 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   logoContainer: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: COLORS.primary,
+    width: 160,
+    height: 160,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
+  },
+  logoImage: {
+    width: '100%',
+    height: '100%',
+  },
+  logoPlaceholder: {
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F0F0F0',
+    borderRadius: 80,
+    borderWidth: 3,
+    borderColor: COLORS.primary,
+  },
+  logoEmoji: {
+    fontSize: 50,
+    marginBottom: -10,
+  },
+  logoBag: {
+    fontSize: 30,
   },
   logoText: {
     fontSize: 40,
   },
   appName: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
-    color: COLORS.text,
+    color: COLORS.primary,
     marginBottom: 8,
+    letterSpacing: 0.5,
   },
   subtitle: {
     fontSize: 14,

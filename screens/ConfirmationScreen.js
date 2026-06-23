@@ -30,8 +30,11 @@ const ConfirmationScreen = ({ route, navigation }) => {
 
   // Navigate back to home
   const handleContinueShopping = () => {
-    // Navigate to the bottom of the Home stack (HomeMain screen)
-    navigation.navigate('HomeMain');
+    // Navigate to the Home tab and reset to RestaurantList
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Home' }],
+    });
   };
 
   return (

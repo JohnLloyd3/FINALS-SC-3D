@@ -126,10 +126,13 @@ export default function RegisterScreen({ navigation }) {
           {/* Header */}
           <View style={styles.header}>
             <View style={styles.logoContainer}>
-              <Text style={styles.logoText}>🍔</Text>
+              <View style={styles.logoPlaceholder}>
+                <Text style={styles.logoEmoji}>🍔</Text>
+                <Text style={styles.logoBag}>🛍️</Text>
+              </View>
             </View>
-            <Text style={styles.appName}>Join Food Ordering</Text>
-            <Text style={styles.subtitle}>Create your account and start enjoying</Text>
+            <Text style={styles.appName}>GrabBite</Text>
+            <Text style={styles.subtitle}>Join us and start ordering today</Text>
           </View>
 
           {/* Form */}
@@ -297,22 +300,42 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   logoContainer: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: COLORS.primary,
+    width: 140,
+    height: 140,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
+  },
+  logoImage: {
+    width: '100%',
+    height: '100%',
+  },
+  logoPlaceholder: {
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F0F0F0',
+    borderRadius: 70,
+    borderWidth: 3,
+    borderColor: COLORS.primary,
+  },
+  logoEmoji: {
+    fontSize: 45,
+    marginBottom: -10,
+  },
+  logoBag: {
+    fontSize: 25,
   },
   logoText: {
     fontSize: 40,
   },
   appName: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
-    color: COLORS.text,
+    color: COLORS.primary,
     marginBottom: 8,
+    letterSpacing: 0.5,
   },
   subtitle: {
     fontSize: 14,

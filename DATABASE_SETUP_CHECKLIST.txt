@@ -1,0 +1,115 @@
+═══════════════════════════════════════════════════════════════
+  FIREBASE REALTIME DATABASE SETUP - CHECKLIST
+═══════════════════════════════════════════════════════════════
+
+✅ CODE IS READY - Now you need to do these steps:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: OPEN FIREBASE CONSOLE
+══════════════════════════════
+□ Go to: https://console.firebase.google.com/
+□ Sign in
+□ Click project: "lloydii"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 2: CREATE REALTIME DATABASE
+═════════════════════════════════
+□ Click "Realtime Database" in left sidebar
+□ Click "Create Database" button
+□ Choose location: "United States (us-central1)"
+   OR "asia-southeast1" for Philippines
+□ Choose: "Start in test mode"
+□ Click "Enable"
+□ Wait 30 seconds...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 3: SET DATABASE RULES
+═══════════════════════════
+□ Click "Rules" tab
+□ Copy this code:
+
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
+      }
+    },
+    "usernames": {
+      ".read": true,
+      "$username": {
+        ".write": "!data.exists() || data.val() === auth.uid"
+      }
+    },
+    "orders": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
+      }
+    }
+  }
+}
+
+□ Paste in rules editor
+□ Click "Publish"
+□ Confirm "Publish"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 4: ENABLE EMAIL/PASSWORD AUTH
+═══════════════════════════════════
+□ Click "Authentication" in left sidebar
+□ Click "Sign-in method" tab
+□ Find "Email/Password"
+□ Click on it
+□ Toggle "Enable" to ON
+□ Click "Save"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 5: RESTART APP
+════════════════════
+□ Stop app (Ctrl+C in terminal)
+□ Run: npx expo start --clear
+□ Scan QR code
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 6: VERIFY IN CONSOLE
+══════════════════════════
+You should see:
+
+[FIREBASE] ✅ App initialized successfully
+[FIREBASE] ✅ Auth initialized successfully
+[FIREBASE] ✅ Database initialized successfully
+[FIREBASE] 📡 Connected to: https://lloydii-default-rtdb.firebaseio.com
+
+NO WARNINGS = SUCCESS! 🎉
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 7: TEST
+═════════════
+□ Register new user
+□ Check Firebase Console → Realtime Database → Data
+□ You should see user data appear!
+
+□ Place an order
+□ Check Firebase Console → Realtime Database → Data
+□ You should see order data appear!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ DONE!
+════════
+Your live database is now connected and working!
+
+Data will sync to cloud automatically.
+
+For detailed instructions: SETUP_FIREBASE_DATABASE_NOW.md
+
+═══════════════════════════════════════════════════════════════

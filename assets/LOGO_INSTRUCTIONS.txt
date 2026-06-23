@@ -1,0 +1,17 @@
+GRABBITE LOGO SETUP
+===================
+
+IMPORTANT: Save the GrabBite logo image as:
+- File name: grabbite-logo.png
+- Location: c:\Users\johnl\OneDrive\Desktop\FINAL SC\assets\grabbite-logo.png
+- Format: PNG with transparent background
+- Recommended size: 512x512 pixels or 1024x1024 pixels
+
+The logo has been provided and should be saved in this folder.
+
+The app is configured to use this logo in:
+1. Login Screen
+2. Registration Screen
+3. App icon (Expo)
+
+Make sure the logo file is named exactly: grabbite-logo.png

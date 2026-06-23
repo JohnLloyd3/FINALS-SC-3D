@@ -1,0 +1,68 @@
+FIREBASE DATABASE WARNING - QUICK FIX
+=====================================
+
+YOUR DATABASE URL IS CORRECT!
+https://lloydii-default-rtdb.firebaseio.com ✓
+
+PROBLEM: Database might not be created yet in Firebase Console
+
+SOLUTION - 3 MINUTES:
+======================
+
+1. GO TO: https://console.firebase.google.com/
+
+2. SELECT PROJECT: "lloydii"
+
+3. CLICK: "Realtime Database" (left menu)
+
+4. IF YOU SEE "Create Database" BUTTON:
+   - Click "Create Database"
+   - Choose location: asia-southeast1 (Singapore)
+   - Choose "Start in test mode"
+   - Click "Enable"
+
+5. IF DATABASE ALREADY EXISTS:
+   - Click "Rules" tab
+   - Copy this:
+
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
+      }
+    },
+    "usernames": {
+      ".read": true,
+      "$username": {
+        ".write": "!data.exists() || data.val() === auth.uid"
+      }
+    },
+    "orders": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
+      }
+    }
+  }
+}
+
+   - Click "Publish"
+
+6. ENABLE EMAIL/PASSWORD AUTH:
+   - Click "Authentication" (left menu)
+   - Click "Sign-in method" tab
+   - Enable "Email/Password"
+   - Click "Save"
+
+7. RESTART APP:
+   npx expo start --clear
+
+DONE! No more warnings!
+
+NOTE: Your app works even without Firebase! 
+It uses AsyncStorage for local storage, so everything 
+still functions perfectly offline.
+
+For detailed instructions, see: FIREBASE_DATABASE_FIX.md
